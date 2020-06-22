@@ -197,19 +197,10 @@ avatar-radius = 50%
     display: flex
     flex-wrap: wrap
     margin: 15px 0
-
     .card-details-item
       margin-right: 0.5em
       &:last-child
         margin-right: 0
-      &.card-details-item-labels,
-      &.card-details-item-members,
-      &.card-details-item-assignees,
-      &.card-details-item-received,
-      &.card-details-item-start,
-      &.card-details-item-due,
-      &.card-details-item-end,
-      &.card-details-item-customfield,
       &.card-details-item-name
         display: block
         word-wrap: break-word
@@ -219,6 +210,29 @@ avatar-radius = 50%
   .card-details-item-title
     font-size: 16px
     color: #000
+
+  .card-details-item-received
+      min-width :23%
+      max-width: 23%
+  .card-details-item-start
+     min-width :23%
+     max-width: 23%
+  .card-details-item-due
+     min-width :23%
+     max-width: 23%
+  .card-details-item-end
+     min-width :23%
+     max-width: 23%
+  .card-details-item-members
+    min-width :48%
+    max-width :48%
+  .card-details-item-assignees
+    min-width :48%
+    max-width :48%
+  .card-details-item-labels
+    width: 100%
+  .card-details-item-customfield
+    width: 100%
 
   .card-label
     padding-top: 5px
