@@ -130,13 +130,13 @@ BlazeComponent.extendComponent({
         showDesktopDragHandles = false;
       }
 
-      if (Utils.isMiniScreen()  && !showDesktopDragHandles) {
+      if (Utils.isMiniScreen() || showDesktopDragHandles) {
         $cards.sortable({
           handle: '.handle',
         });
       } else if (!Utils.isMiniScreen() && !showDesktopDragHandles) {
         $cards.sortable({
-          handle: '.handle',
+          handle: '.minicard',
         });
       }
 
