@@ -130,13 +130,13 @@ BlazeComponent.extendComponent({
         showDesktopDragHandles = false;
       }
 
-      if (Utils.isMiniScreen() || showDesktopDragHandles) {
+      if (Utils.isMiniScreen()  && !showDesktopDragHandles) {
         $cards.sortable({
           handle: '.handle',
         });
       } else if (!Utils.isMiniScreen() && !showDesktopDragHandles) {
         $cards.sortable({
-          handle: '.minicard',
+          handle: '.handle',
         });
       }
 
@@ -193,9 +193,19 @@ Template.list.helpers({
   },
 });
 
-Template.miniList.events({
-  'click .js-select-list'() {
-    const listId = this._id;
-    Session.set('currentList', listId);
-  },
-});
+// Template.miniList.events({
+//   showDesktopDragHandles() {
+//     currentUser = Meteor.user();
+//     if (currentUser) {
+//       return (currentUser.profile || {}).showDesktopDragHandles;
+//     } else if (cookies.has('showDesktopDragHandles')) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   },
+//   // 'click .js-select-list'() {
+//   //   const listId = this._id;
+//   //   Session.set('currentList', listId);
+//   // },
+// });
