@@ -1,34 +1,43 @@
 .card-date
   display: block
   border-radius: 4px
-  padding: 1px 3px
-  
-  background-color: #dbdbdb
+  padding: 2px 5px
+  width: fit-content
+  background-color: #FFF4ED
+  color : #FF8D38
+  font-size: 12px;
   &:hover, &.is-active
-    background-color: #b3b3b3
-  
-  &.current, &.almost-due, &.due, &.long-overdue
-    color: #fff
+    background-color: #FFF4ED
+
+  &.current, &.almost-due
+    color: #FF8D38
+  &.due, &.long-overdue
+    color:#1EC043
 
   &.current
-    background-color: #5ba639
+    background-color: #FFF4ED
+    font-size: 12px;
     &:hover, &.is-active
-      background-color: darken(#5ba639, 10)
-  
+      background-color: darken(#FFF4ED, 10)
+
+
   &.almost-due
-    background-color: #edc909
+    font-size: 12px;
+    background-color: #EAF7EC
     &:hover, &.is-active
-      background-color: darken(#edc909, 10)
-  
+      background-color: darken(#EAF7EC, 10)
+
   &.due
-    background-color: #fa3f00
+    background-color: #EAF7EC
+    font-size: 12px;
     &:hover, &.is-active
-      background-color: darken(#fa3f00, 10)
-  
+      background-color: darken(#EAF7EC, 10)
+
   &.long-overdue
-    background-color: #fd5d47
+    font-size: 12px;
+    background-color: #EAF7EC
     &:hover, &.is-active
-      background-color: darken(#fd5d47, 7)
+      background-color: darken(#EAF7EC, 10)
 
   &.end-date
     time

@@ -5,7 +5,8 @@
   position: relative
   display: flex
   align-items: center
-  margin-bottom: 9px
+  margin-bottom: 10px
+
 
   &.placeholder
     background: darken(white, 20%)
@@ -31,18 +32,16 @@
     margin-left: 8px
 
 .minicard
-  padding: 6px 8px 2px
+  padding: 10px 10px 4px 10px;
   position: relative
   flex: 1
   flex-wrap: wrap
   background-color: #fff
   min-height: 20px
-  box-shadow: 0 1px 2px rgba(0,0,0,.15)
-  border-radius: 2px
-  color: #4d4d4d
-  overflow: hidden
+  border-radius: 7px
+  color: #777777
   transition: transform 0.2s,
-              border-radius 0.2s
+
 
   &.linked-board
   &.linked-card
@@ -71,12 +70,16 @@
 
   .minicard-cover
     background-position: center
-    background-repeat: no-repeat
-    background-size: contain
+    background-repeat: inherit
+    background-size: cover
     height: 145px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
     user-select: none
-    margin: -6px -8px 6px -8px
-    border-radius: top 2px
+    margin: -11px -10px 6px -9px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
 
   .minicard-labels
     float: none
@@ -89,7 +92,7 @@
       border-radius: 2px
       margin-right: 3px
       margin-bottom: 3px
-      
+
   .minicard-custom-fields
     display:block;
   .minicard-custom-field
@@ -120,12 +123,21 @@
       display: block
       word-wrap: break-word
       max-width: 230px
+      font-size:14px
+      font-family: Poppins, sans-serif
+      font-color:#777777
+
   .dates
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top:10px
   .date
     margin-right: 3px
+    font-family: Poppins, sans-serif
+    font-weight: normal
+    font-size: 12px
+
   .badges
     float: left
     margin-top: 7px
@@ -165,7 +177,7 @@
   .minicard-members,
   .minicard-assignees
     float: right
-    margin: 2px -8px 12px 0
+    margin: 30px -7px -19px 5px
 
     .member
       float: right
@@ -180,7 +192,7 @@
       width: @height
 
     + .badges
-      margin-top: 10px
+      margin-top: 35px
 
   .minicard-members:empty,
   .minicard-assignees:empty
