@@ -138,22 +138,22 @@ window.ExportHtml = Popup => {
     });
   };
 
-  const removeCssUrlSurround = url => {
-    const working = url || '';
-    return working
-      .split('url(')
-      .join('')
-      .split('")')
-      .join('')
-      .split('"')
-      .join('')
-      .split("')")
-      .join('')
-      .split("'")
-      .join('')
-      .split(')')
-      .join('');
-  };
+  // const removeCssUrlSurround = url => {
+  //   const working = url || '';
+  //   return working
+  //     .split('url(')
+  //     .join('')
+  //     .split('")')
+  //     .join('')
+  //     .split('"')
+  //     .join('')
+  //     .split("')")
+  //     .join('')
+  //     .split("'")
+  //     .join('')
+  //     .split(')')
+  //     .join('');
+  // };
 
   const getCardCovers = () => {
     return Array.from(document.querySelectorAll('.minicard-cover')).filter(
@@ -176,7 +176,7 @@ window.ExportHtml = Popup => {
         .shift();
       const fileFullPath = `${boardSlug}/covers/${filename}`;
       zip.file(fileFullPath, responseBody);
-      elem.style = "background-image: url('" + `covers/${filename}` + "')";
+      elem.style = `background-image: url('" + 'covers/${filename}' + "')`;
     });
   };
 

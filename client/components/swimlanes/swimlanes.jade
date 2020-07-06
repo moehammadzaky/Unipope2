@@ -3,15 +3,7 @@ template(name="swimlane")
     +swimlaneHeader
   unless collapseSwimlane
     .swimlane.js-lists.js-swimlane(id="swimlane-{{_id}}")
-      if isMiniScreen
-        each lists
-          +list(this)
-          if currentCardIsInThisList _id ../_id
-            +cardDetails(currentCard)
-        if currentUser.isBoardMember
-          unless currentUser.isCommentOnly
-            +addListForm
-      else
+
         each lists
           +list(this)
           if currentCardIsInThisList _id ../_id
@@ -22,16 +14,7 @@ template(name="swimlane")
 
 template(name="listsGroup")
   .swimlane.list-group.js-lists
-    if isMiniScreen
-      each lists
-        if visible this
-          +list(this)
-        if currentCardIsInThisList _id null
-          +cardDetails(currentCard)
-      if currentUser.isBoardMember
-        unless currentUser.isCommentOnly
-          +addListForm
-    else
+
       each lists
         if visible this
           +list(this)

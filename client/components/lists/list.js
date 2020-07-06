@@ -194,18 +194,18 @@ Template.list.helpers({
 });
 
 // Template.miniList.events({
-//   showDesktopDragHandles() {
-//     currentUser = Meteor.user();
-//     if (currentUser) {
-//       return (currentUser.profile || {}).showDesktopDragHandles;
-//     } else if (cookies.has('showDesktopDragHandles')) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   },
-//   // 'click .js-select-list'() {
-//   //   const listId = this._id;
-//   //   Session.set('currentList', listId);
+//   // showDesktopDragHandles() {
+//   //   currentUser = Meteor.user();
+//   //   if (currentUser) {
+//   //     return (currentUser.profile || {}).showDesktopDragHandles;
+//   //   } else if (cookies.has('showDesktopDragHandles')) {
+//   //     return true;
+//   //   } else {
+//   //     return false;
+//   //   }
 //   // },
+//   'click .js-select-list'() {
+//     const listId = this._id;
+//     Session.set('currentList', listId);
+//   },
 // });
