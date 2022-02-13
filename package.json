@@ -57,7 +57,7 @@
     "@babel/core": "^7.9.6",
     "@babel/runtime": "^7.9.6",
     "@root/request": "^1.6.1",
-    "ajv": "^5.0.0",
+    "ajv": "^6.12.3",
     "babel-runtime": "^6.26.0",
     "bcrypt": "^3.0.7",
     "bson": "^4.0.3",
